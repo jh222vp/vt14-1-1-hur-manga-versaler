@@ -7,20 +7,20 @@ namespace _1._1_Hur_många_versaler.Model
 {
     static class TextAnalyzer
     {
-        public static int GetNumberOfCaptials(string text){
+        public static int GetNumberOfCaptials(string text)
+        {
 
             var count = 0;
-                foreach (Char inputString in text)
+            foreach (Char inputString in text)
+            {
+                if (Char.IsUpper(inputString))
                 {
-                    if(Char.IsUpper(inputString))
-                    {
-                        count++;
-                    }
+                    count++;
                 }
-
-                return count;
+            }
+            return count;
 
         }
-        
+
     }
 }
